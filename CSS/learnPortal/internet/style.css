@@ -1,4 +1,31 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
+}
+#wrapper{
+  background: linear-gradient(#e3e3e3,#ffffff);
+  width:970px;
+}
+header {
+  background-color: white;
+}
+header img{
+  width:80px;
+  display: inline-block;
+  margin-bottom: -25px;
+}
+header h1 {
+  display: inline;
+  font-weight: normal;
+
+}
+header h2 {
+  color: white;
+  background: linear-gradient(#25669f,#4e80aa,#25669f);
+  font-weight: normal;
+  padding: 10px;
+}
+span.internet {
+  color: #22659e;
 }

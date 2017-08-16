@@ -5,8 +5,27 @@
 }
 body{
   width: 970px;
+  background-color: #245176;
+  color: white;
 }
 img {
   display: inline-block;
-
+  width: 350px;
+  padding: 10px;
+}
+.search-options {
+  vertical-align: top;
+  margin: 10px;
+  display: inline-block;
+  font-size: 12px;
+  text-align: right;
+}
+.search-options a{
+  color: #ceaf05;
+}
+#searchbox{
+  background-color: #444444;
+  padding: 10px 30px;
+  margin-top: 5px;
+  border-radius: 6px;
 }

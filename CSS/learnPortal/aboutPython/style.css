@@ -10,7 +10,12 @@ a {
 span{
   color: black;
 }
-body{
+h3{
+  font-weight: normal;
+  padding: 5px;
+}
+#wrapper{
+  margin: 0 auto;
   width: 970px;
   background-color: #245176;
   color: white;
@@ -56,6 +61,7 @@ button {
 }
 .body{
   margin: 0 70px;
+  border-bottom: 2px solid #183853;
 }
 .navbar{
   background-color: #487eac;
@@ -99,18 +105,26 @@ h6 {
   background-color: white;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   color:black;
 }
 #links a{
   color: #75a8d6;
 }
+#links ul{
+  list-style-type: square;
+  list-style-position: outside;
+  width: 400px;
+}
 .getting-started{
   width: 410px;
   display: inline-block;
   vertical-align: top;
+  border-top: 3px solid #75a8d6;
+  margin-right: 20px;
 }
 .applications{
   width: 410px;
   display: inline-block;
+  border-top: 3px solid #75a8d6;
 }

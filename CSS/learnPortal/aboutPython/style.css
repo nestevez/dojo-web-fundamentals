@@ -98,4 +98,19 @@ h6 {
 #links{
   background-color: white;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  color:black;
+}
+#links a{
+  color: #75a8d6;
+}
+.getting-started{
+  width: 410px;
+  display: inline-block;
+  vertical-align: top;
+}
+.applications{
+  width: 410px;
+  display: inline-block;
 }

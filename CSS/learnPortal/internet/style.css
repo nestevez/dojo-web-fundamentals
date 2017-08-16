@@ -29,3 +29,75 @@ header h2 {
 span.internet {
   color: #22659e;
 }
+h5 > span.internet {
+  color: #da342e;
+}
+#ads {
+  vertical-align: top;
+  display: inline-block;
+  width: 150px;
+}
+.whatis {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #c0c0c0;
+}
+button {
+  width:150px;
+  border-radius: 6px;
+  padding: 5px;
+  margin-top: 5px;
+  color: white;
+}
+button[name="watch"] {
+  background: linear-gradient(#6096c1,#306a9c);
+}
+button[name="resources"] {
+  background: linear-gradient(#ebac57,#ef7800);
+}
+button[name="learn"] {
+  background: linear-gradient(#72cfdf,#00c1df);
+  margin: 0 10px;
+  width: auto;
+}
+.reinvent {
+  padding: 20px 0;
+  color:white;
+  text-align: center;
+  width:150px;
+  background-image: url(img/ad_background.png);
+}
+.reinvent h3 {
+  font-weight: normal;
+}
+.reinvent img{
+  width:75px;
+}
+#body{
+  display: inline-block;
+  width: 800px;
+  vertical-align: top;
+}
+img[alt="home"]{
+  height: 20px;
+}
+img[alt="phone"]{
+  width: 40px;
+  display: inline-block;
+}
+#contact a {
+  text-decoration: none;
+}
+.phonenumber{
+  display: inline-block;
+  margin-left: 600px;
+}
+.numbers{
+  display: inline-block;
+}
+.explanation {
+
+}
+.explanation li {
+  margin: 0 30px;
+}

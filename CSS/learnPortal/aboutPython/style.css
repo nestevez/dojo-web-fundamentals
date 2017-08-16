@@ -68,14 +68,34 @@ button {
 #main-resources{
   margin: 20px;
   display: inline-block;
+  vertical-align: top;
 }
-#main-resources ul{
+#main-resources ul li {
   text-align: center;
   list-style-position: inside;
   text-decoration: underline;
+  padding: 5px;
 }
 #intro {
   display: inline-block;
   text-align: center;
-  width: 500px;
+  width: 580px;
+  font-size: 14px;
+  margin: 20px;
+}
+h5 {
+  padding: 5px;
+  color: #edc935;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: italic;
+}
+h6 {
+  padding: 5px;
+  font-size: 16px;
+  font-weight: normal;
+}
+#links{
+  background-color: white;
+  text-align: center;
 }

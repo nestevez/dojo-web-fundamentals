@@ -1,0 +1,21 @@
+var number1 = 459;
+var number2 = -34;
+var number3 = 353.445;
+var number4 = 46456;
+var string1 = "I";
+var string2 = "Do";
+var string3 = "Declare";
+var boolean1 = true;
+var boolean2 = false;
+var nonexistent;
+
+console.log("This is what an undefined variable prints out as: ", nonexistent);
+console.log("The first boolean is: ", boolean1);
+console.log("The second boolean is: ", boolean2);
+console.log("The first string is: ", string1);
+console.log("The second string is: ", string2);
+console.log("The third string is: ", string3);
+console.log("The first number is: ", number1);
+console.log("The second number is: ",number2);
+console.log("The third number is: ", number3);
+console.log("The fourth number is: ", number4);

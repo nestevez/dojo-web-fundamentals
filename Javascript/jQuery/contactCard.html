@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Cards</title>
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('input[name="addContact"]').click(function(event){
+        event.preventDefault();
+        $('<ul alt-text="'+
+        $('textarea[name="description"]').val()+
+        '"><li><h3>'+
+        $('input[name="firstName"]').val()+
+        ' '+
+        $('input[name="lastName"]').val()+
+        '</h3></li><li><p>Email: '+
+        $('input[name="email"]').val()+
+        '</p></li><li><h6>Click here for description!</h6></li></ul>').appendTo('div.cards');
+        $('ul').css({'border': '1px solid black','list-style-type': 'none','text-align': 'center', 'margin':'20px', 'padding':'5px'});
+      });
+      $(document).on('click','ul',function(){
+        let temp = $(this).html();
+        $(this).html('<li>'+$(this).attr('alt-text')+'</li>');
+        $(this).attr('alt-text',temp);
+      });
+    })
+    </script>
+    <style type="text/css">
+      *{
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      form {
+        display: inline-block;
+        width: 450px;
+        padding: 30px;
+        vertical-align: top;
+      }
+      form label {
+        display: block;
+        padding: 5px;
+      }
+      textarea {
+        width: 400px;
+      }
+      .cards {
+        display: inline-block;
+        width: 450px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form class="newContact" action="index.html" method="post">
+        <label>
+          First Name: <input type="text" name="firstName" value="First Name">
+        </label>
+        <label>
+          Last Name: <input type="text" name="lastName" value="Last Name">
+        </label>
+        <label>
+          Email: <input type="email" name="email" value="Email">
+        </label>
+        <label>
+          Description: <textarea name="description" rows="8" cols="80"></textarea>
+        </label>
+        <input type="submit" name="addContact" value="Add New Contact">
+      </form>
+      <div class="cards">
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -8,15 +8,11 @@
     $(document).ready(function(){
       $('input[name="addContact"]').click(function(event){
         event.preventDefault();
-        $('<ul alt-text="'+
-        $('textarea[name="description"]').val()+
-        '"><li><h3>'+
-        $('input[name="firstName"]').val()+
-        ' '+
-        $('input[name="lastName"]').val()+
-        '</h3></li><li><p>Email: '+
-        $('input[name="email"]').val()+
-        '</p></li><li><h6>Click here for description!</h6></li></ul>').appendTo('div.cards');
+        var desc = $('textarea[name="description"]').val();
+        var fname = $('input[name="firstName"]').val();
+        var lname = $('input[name="lastName"]').val();
+        var email = $('input[name="email"]').val();
+        $('<ul alt-text="'+desc+'"><li><h3>'+fname+' '+lname+'</h3></li><li><p>Email: '+email+'</p></li><li><h6>Click here for description!</h6></li></ul>').appendTo('div.cards');
         $('ul').css({'border': '1px solid black','list-style-type': 'none','text-align': 'center', 'margin':'20px', 'padding':'5px'});
       });
       $(document).on('click','ul',function(){

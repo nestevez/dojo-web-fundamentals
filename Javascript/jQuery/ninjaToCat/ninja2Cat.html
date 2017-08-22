@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja to Cat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('img').css('width','400px');
+        $('img').css('display','block');
+        $('img').css('padding','20 px');
+        $('img').css('margin','10px auto');
+        $('img').click(function(){
+          let temp1 = $(this).attr('src');
+          let temp2 = $(this).attr('alt');
+          $(this).attr({
+            src: $(this).attr('scnd-src'),
+            alt: $(this).attr('scnd-alt')
+          });
+          $(this).attr({
+            'scnd-src': temp1,
+            'scnd-alt': temp2
+          });
+        });
+      })
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <img src="img/cat0.png" alt="cat ears" scnd-src="img/ninja0.png" scnd-alt="ninja band" />
+      <img src="img/cat1.png" alt="cat eyes" scnd-src="img/ninja1.png" scnd-alt="ninja head" />
+      <img src="img/cat2.png" alt="cat neck" scnd-src="img/ninja2.png" scnd-alt="ninja eyes" />
+      <img src="img/cat3.png" alt="cat body" scnd-src="img/ninja3.png" scnd-alt="ninja hands" />
+      <img src="img/cat4.png" alt="cat paws" scnd-src="img/ninja4.png" scnd-alt="ninja legs" />
+    </div>
+  </body>
+</html>

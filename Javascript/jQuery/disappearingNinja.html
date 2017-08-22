@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing Ninja</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#wrapper').css('width','970px');
+        $('#wrapper').css('padding','20px');
+        $('#wrapper').css('margin', '0 auto');
+        $('h1').css('text-align', 'center');
+        $('img').css('width','230px');
+        $('img').css('height', '230px');
+        $('img').css('padding','5px 5px 0 0');
+        $('img').click(function(){
+          $(this).fadeOut(400);
+        });
+        $('button').click(function(){
+          $('img').fadeIn(400);
+        });
+      })
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Disappearing Picture Game</h1>
+      <img src="https://i.pinimg.com/736x/bf/a5/f4/bfa5f46bd64798c93423222c58c2c3c6--hamster-stuff-baby-hamster.jpg" alt="baby hamster"/>
+      <img src="https://i.amz.mshcdn.com/GI2CD9bMLWzOSMDV9ygVusM7ZHU=/356x205/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F51167%2F5ee9a826-a4f5-4301-9068-1a4f6eb6fbed.jpg" alt="hamster in a hoodie"/>
+      <img src="https://i.pinimg.com/736x/bf/a5/f4/bfa5f46bd64798c93423222c58c2c3c6--hamster-stuff-baby-hamster.jpg" alt="baby hamster"/>
+      <img src="https://i.amz.mshcdn.com/GI2CD9bMLWzOSMDV9ygVusM7ZHU=/356x205/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F51167%2F5ee9a826-a4f5-4301-9068-1a4f6eb6fbed.jpg" alt="hamster in a hoodie"/>
+      <img src="https://i.pinimg.com/736x/bf/a5/f4/bfa5f46bd64798c93423222c58c2c3c6--hamster-stuff-baby-hamster.jpg" alt="baby hamster"/>
+      <img src="https://i.amz.mshcdn.com/GI2CD9bMLWzOSMDV9ygVusM7ZHU=/356x205/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F51167%2F5ee9a826-a4f5-4301-9068-1a4f6eb6fbed.jpg" alt="hamster in a hoodie"/>
+      <img src="https://i.pinimg.com/736x/bf/a5/f4/bfa5f46bd64798c93423222c58c2c3c6--hamster-stuff-baby-hamster.jpg" alt="baby hamster"/>
+      <img src="https://i.amz.mshcdn.com/GI2CD9bMLWzOSMDV9ygVusM7ZHU=/356x205/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F51167%2F5ee9a826-a4f5-4301-9068-1a4f6eb6fbed.jpg" alt="hamster in a hoodie"/>
+      <button type="button" name="restore">Restore</button>
+    </div>
+  </body>
+</html>

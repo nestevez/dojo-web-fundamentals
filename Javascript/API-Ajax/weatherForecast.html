@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    function tempKToF(temp){
+      var ftemp;
+      ftemp = (9*(temp - 273)/5)+32;
+      return Math.round(ftemp);
+    }
+    function tempKToC(temp){
+      var ctemp;
+      ctemp = temp - 273;
+      return Math.round(ctemp);
+    }
+    $(document).ready(function(){
+      console.log("IT'S ALIVE!");
+      $('form').submit(function(e){
+        e.preventDefault();
+        var url = "https://api.openweathermap.org/data/2.5/weather?q="+$("#location").val()+"&APPID=4b371518238f96076fa4f1230f047d25";
+        $.get(url, function(res){
+          var disTemp;
+          var cityName = res.name;
+          var temp = res.main.temp;
+          var tempStyle = $("input:checked").val();
+
+          if (tempStyle === 'C') {
+            disTemp=tempKToC(temp);
+          } else {
+            disTemp=tempKToF(temp);
+            if (tempStyle === undefined){
+              tempStyle = 'F';
+            }
+          }
+
+          $(".temperature").html(`<h2>Temperature in `+cityName+`:</h2><h1>`+disTemp+` &deg;`+tempStyle+`</h1>`)
+        },'json')
+      })
+    })
+    </script>
+    <style type="text/css">
+      .wrapper {
+        width: 970px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form class="searchBar" action="index.html" method="post">
+        <h3>Where ya at?</h3>
+        <input id="location" type="text" name="location" placeholder="City/Town, State, or Country Code" value="">
+        <label>
+          <input id="F" type="radio" name="tempStyle" value="F"> &deg; F
+        </label>
+        <label>
+          <input id="C" type="radio" name="tempStyle" value="C"> &deg; C
+        </label>
+        <input type="submit" name="submit" value="Get Temperature">
+      </form>
+      <div class="temperature">
+
+      </div>
+    </div>
+  </body>
+</html>

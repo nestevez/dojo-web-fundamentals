@@ -22,7 +22,15 @@ $(document).ready(function(){
   $("div.cards").on("click",".card",function(){
     $(this).children().toggle();
     console.log(this);
-
   })
 
+  $("form.githubForm").submit(function(e){
+    e.preventDefault();
+    console.log(e.target.childNodes[3].value);
+    let username = $("#username").val();
+    $.get("https://api.github.com/users/"+username,function(data){
+      console.log(data);
+      generateCard(data.login,data.name,data.bio);
+    })
+  })
 })

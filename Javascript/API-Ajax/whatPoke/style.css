@@ -1,0 +1,15 @@
+div {
+  display: inline-block;
+  text-align: center;
+}
+.pokedex {
+  border: 10px solid grey;
+  vertical-align: top;
+  width: 200px;
+  position: fixed;
+  top: 20px;
+  left: 820px;
+}
+.pictures{
+  width: 800px;
+}

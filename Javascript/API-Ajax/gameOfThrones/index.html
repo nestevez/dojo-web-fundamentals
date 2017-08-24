@@ -6,13 +6,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
+    function houseDetails(housenum){
+      var url = "https://www.anapioficeandfire.com/api/houses/"+housenum;
+      console.log(url);
+      $.get(url,function(res){
+        console.log(res);
+        var name = res.name;
+        var words = res.words;
+        var titles;
+        if (typeof res.titles === 'object'){
+          titles = res.titles[0];
+          for (i=1;i<res.titles.length;i++){
+            titles+= ', '+res.titles[i];
+          }
+        } else {
+          titles = res.titles;
+        }
+        $(".details").html(`<h5>`+name+`</h5>
+          <p><span>Words:</span></p>
+          <p>`+words+`</p>
+          <p><span>Titles:</span></p>
+          <p>`+titles+`</p>`);
+          $(".details").css({'padding':'10px','background-color':'white','border':'2px solid black','width':'300px', 'position':'fixed','top':'250px','left': '530px'});
+          $("span").css({'font-weight':'bold'});
+          $('.details').show();
+      },'json')
+    }
     $(document).ready(function(){
       $('img').click(function(){
-        var url = "https://www.anapioficeandfire.com/api/houses/"+$(this).attr("id");
-        console.log(url);
-        $.get(url,function(res){
-          $(".details").html(`<h2></h2>`)
-        },'json')
+        var housenum = $(this).attr("id");
+        houseDetails(housenum);
+        $('.wrapper').on('click','div.details',function(){
+          $(this).hide();
+        })
       })
     })
     </script>

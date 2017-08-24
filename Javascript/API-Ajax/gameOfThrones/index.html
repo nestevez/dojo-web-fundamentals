@@ -2,9 +2,49 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Game of Thrones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('img').click(function(){
+        var url = "https://www.anapioficeandfire.com/api/houses/"+$(this).attr("id");
+        console.log(url);
+        $.get(url,function(res){
+          $(".details").html(`<h2></h2>`)
+        },'json')
+      })
+    })
+    </script>
+    <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper {
+      width: 970px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    img {
+      width: 450px;
+      height: 300px;
+      display: inline;
+    }
+    </style>
   </head>
   <body>
+    <div class="wrapper">
+      <h1>Pick Your House</h1>
+      <div class="houses">
+        <img id="17" src="img/baratheon.png" alt="House Baratheon">
+        <img id="229" src="img/lannister.jpg" alt="House Lannister">
+        <img id="362" src="img/stark.jpg" alt="House Stark">
+        <img id="378" src="img/targaryen.jpg" alt="House Targaryen">
+      </div>
+      <div class="details">
 
+      </div>
+    </div>
   </body>
 </html>
